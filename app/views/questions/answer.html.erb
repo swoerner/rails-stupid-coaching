@@ -1,0 +1,23 @@
+<!-- will display the question you ask your coach as well as his answer. -->
+
+<h1>Questions#answer</h1>
+<!-- <p>Find me in app/views/questions/answer.html.erb</p> -->
+
+<div>
+  <% if @question.downcase == "i am going to work" %>
+  <p>Great!</p>
+  <% elsif @question.split("").include?("?")%>
+  <p>Silly question, get dressed and go to work!</p>
+  <% else %>
+  <p>I don't care, get dressed and go to work!</p>
+  <% end %>
+  <p>-Your Coach</p>
+</div>
+<%= link_to "Another Question", ask_path %>
+
+
+<!-- If the message is I am going to work, the coach will answer Great!
+If the message has a question mark ? at the end, the coach will answer Silly question, get dressed and go to work!.
+Otherwise he will answer I don't care, get dressed and go to work! -->
+
+
